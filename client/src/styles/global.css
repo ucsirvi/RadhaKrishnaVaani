@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply bg-gray-100 text-gray-800 antialiased;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-gray-900;
+}
+
+p {
+  @apply text-gray-700;
+}
+
+a {
+  @apply text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out;
+}
+
+button {
+  @apply bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition duration-300 ease-in-out;
+}
+
+
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}
+
+
+.section {
+  @apply py-12;
+}
+
+
+.grid-gap {
+  @apply grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3;
+}
+
+
+.card {
+  @apply bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300;
+}
+
+.card-header {
+  @apply bg-gray-200 p-4 font-bold text-lg text-gray-800;
+}
+
+.card-body {
+  @apply p-4 text-gray-700;
+}
+
+.card-footer {
+  @apply bg-gray-100 p-4 text-right;
+}
+
+
+.primary-btn {
+  @apply bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300 ease-in-out;
+}
+
+.secondary-btn {
+  @apply bg-gray-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-600 transition duration-300 ease-in-out;
+}
+
+/* Custom Form Styles */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  @apply border border-gray-300 rounded-lg py-2 px-4 w-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500;
+}
+
+
+.video-container {
+  @apply relative overflow-hidden pb-9/16;
+}
+
+.video-container iframe {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+
+@layer utilities {
+  .pb-9/16 {
+    padding-bottom: 56.25%; 
+  }
+}
+
