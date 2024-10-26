@@ -4,7 +4,7 @@ import krishna from "../assets/krishna.jpg"; // Background image
 
 
 const Header = () => {
-  const { isSignedIn } = useUser();
+
   const navigate = useNavigate();
 
  
