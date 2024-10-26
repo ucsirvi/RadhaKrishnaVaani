@@ -9,7 +9,7 @@ const Chapters = () => {
   useEffect(() => {
     const fetchChapters = async () => {
       try {
-        const response = await fetch("/api/chapters");
+        const response = await fetch("https://radhakrishnavaani-server.onrender.com/api/chapters");
         const data = await response.json();
         setChapters(data);
       } catch (error) {
