@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/1.png"; // Import your logo
-import krishna from "../assets/kr.jpg"; // Background image
+import krishna from "../assets/krishna.jpg"; // Background image
 import { UserButton, useUser } from "@clerk/clerk-react";
 
 const Header = () => {
