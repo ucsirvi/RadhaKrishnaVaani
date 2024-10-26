@@ -16,7 +16,7 @@ const Home = () => {
 
   const checkSubscriptionStatus = async () => {
     try {
-      const response = await axios.get("/api/check-subscription");
+      const response = await axios.get("https://radhakrishnavaani-server.onrender.com/api/check-subscription");
       setIsSubscribed(response.data.isSubscribed);
     } catch (error) {
       console.error("Error checking subscription status:", error.message);
