@@ -58,23 +58,11 @@ const Home = () => {
         </div>
       </section>
 
-        isSubscribed ? (
+      {isSubscribed ? (
           <Unsubscribe setIsSubscribed={setIsSubscribed} />
         ) : (
           <SubscriptionForm setIsSubscribed={setIsSubscribed} />
-        )
-       : (
-        <section className="py-8 text-center bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-700 text-white">
-          <h2 className="text-3xl font-semibold mb-4">
-            Manage Your Subscription
-          </h2>
-          <Link to="/auth/sign-in">
-            <button className="bg-teal-500 px-6 py-3 rounded-full text-white font-semibold hover:bg-teal-600 transition duration-300 shadow-md">
-              Sign In to Manage Subscription
-            </button>
-          </Link>
-        </section>
-      )
+        )}
 
       <section className="py-16 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 text-center">
