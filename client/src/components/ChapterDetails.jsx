@@ -12,7 +12,7 @@ const ChapterDetails = () => {
   useEffect(() => {
     const fetchChapterDetails = async () => {
       try {
-        const response = await fetch(`/api/chapters/${chapterId}`);
+        const response = await fetch(`https://radhakrishnavaani-server.onrender.com/api/chapters/${chapterId}`);
         const data = await response.json();
         setChapter(data);
         setFilteredVerses(data.BhagavadGitaChapter);
