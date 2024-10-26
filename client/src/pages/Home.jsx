@@ -6,12 +6,11 @@ import GitaBot from "../pages/GitaBot.jsx";
 import SubscriptionForm from "../pages/SubscriptionForm";
 import Unsubscribe from "../pages/Unsubscribe";
 import axios from "axios";
-import { useUser } from "@clerk/clerk-react";
+
 
 const Home = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [error, setError] = useState("");
-  const { isSignedIn } = useUser();
   const navigate = useNavigate();
 
   const checkSubscriptionStatus = async () => {
@@ -28,14 +27,7 @@ const Home = () => {
     checkSubscriptionStatus();
   }, []);
 
-  const handleLinkClick = (event, path) => {
-    if (!isSignedIn) {
-      event.preventDefault();
-      navigate("/auth/sign-in");
-    } else {
-      navigate(path);
-    }
-  };
+
 
   return (
     <div>
@@ -66,13 +58,12 @@ const Home = () => {
         </div>
       </section>
 
-      {isSignedIn ? (
         isSubscribed ? (
           <Unsubscribe setIsSubscribed={setIsSubscribed} />
         ) : (
           <SubscriptionForm setIsSubscribed={setIsSubscribed} />
         )
-      ) : (
+       : (
         <section className="py-8 text-center bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-700 text-white">
           <h2 className="text-3xl font-semibold mb-4">
             Manage Your Subscription
@@ -83,7 +74,7 @@ const Home = () => {
             </button>
           </Link>
         </section>
-      )}
+      )
 
       <section className="py-16 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -109,19 +100,8 @@ const Home = () => {
           </p>
         </div>
       </section>
-
-      {isSignedIn ? (
         <GitaBot />
-      ) : (
-        <div className="py-8 bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-700 text-white text-center">
-          <h2 className="text-3xl font-semibold mb-4">Interact with GitaBot</h2>
-          <Link to="/auth/sign-in">
-            <button className="bg-teal-500 px-6 py-3 rounded-full text-white font-semibold hover:bg-teal-600 transition duration-300 shadow-md">
-              Sign In to Access GitaBot
-            </button>
-          </Link>
-        </div>
-      )}
+      
     </div>
   );
 };
