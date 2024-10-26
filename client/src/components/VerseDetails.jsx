@@ -19,7 +19,7 @@ const VerseDetails = () => {
     const fetchVerseDetails = async () => {
       try {
         const response = await axios.get(
-          `/api/chapters/${chapterId}/verse/${verseId}`
+          `https://radhakrishnavaani-server.onrender.com/api/chapters/${chapterId}/verse/${verseId}`
         );
         setVerse(response.data);
       } catch (err) {
