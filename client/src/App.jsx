@@ -10,7 +10,7 @@ import VerseDetails from "./components/VerseDetails";
 import Unsubscribe from "./pages/Unsubscribe";
 import Reels from "./pages/Reels.jsx";
 import Contact from "./pages/Contact.jsx";
-import SignInPage from "./pages/SignInPage.jsx";
+
 
 const App = () => {
   return (
@@ -18,7 +18,6 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/auth/sign-in" element={<SignInPage />} />
         <Route path="/chapters" element={<Chapters />} />
         <Route path="/chapters/:chapterId" element={<ChapterDetails />} />
         <Route
