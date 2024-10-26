@@ -11,7 +11,7 @@ const SubscriptionForm = ({ setIsSubscribed }) => {
   const checkIfSubscribed = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/api/check-subscription", {
+      const response = await axios.get("https://radhakrishnavaani-server.onrender.com/api/check-subscription", {
         params: { email },
       });
 
@@ -46,7 +46,7 @@ const SubscriptionForm = ({ setIsSubscribed }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post("/api/subscribe", {
+      const response = await axios.post("https://radhakrishnavaani-server.onrender.com/api/subscribe", {
         name,
         email,
       });
