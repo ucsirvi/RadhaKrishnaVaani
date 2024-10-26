@@ -50,7 +50,6 @@ const Home = () => {
           </p>
           <Link
             to="/chapters"
-            onClick={(e) => handleLinkClick(e, "/chapters")}
             className="bg-gradient-to-r from-pink-600 to-yellow-400 px-6 py-3 rounded-full text-lg md:text-xl font-semibold shadow-lg hover:shadow-2xl transition duration-300"
           >
             Explore Chapters
