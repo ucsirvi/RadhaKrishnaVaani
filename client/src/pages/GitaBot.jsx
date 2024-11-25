@@ -22,7 +22,7 @@ const GitaBot = () => {
       try {
         await loadScript("https://cdn.botpress.cloud/webchat/v2.2/inject.js");
         await loadScript(
-          "https://files.bpcontent.cloud/2024/10/04/14/20241004142119-0UR9DVOH.js"
+          "https://files.bpcontent.cloud/2024/10/04/14/20241004142119-0UR9DVOH.js "
         );
 
         window.botpressWebChat.init({
