@@ -25,9 +25,6 @@ const GitaBot = () => {
           "https://files.bpcontent.cloud/2024/10/04/14/20241004142119-0UR9DVOH.js"
         );
 
-        
-
-    
 
         window.botpressWebChat.init({
           botId: "your-bot-id",
