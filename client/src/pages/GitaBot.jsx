@@ -20,10 +20,14 @@ const GitaBot = () => {
 
     const loadBotpressScripts = async () => {
       try {
-        await loadScript("https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/10/04/14/20241004142119-LB5L9U84.json");
+        await loadScript("https://cdn.botpress.cloud/webchat/v2.2/inject.js");
         await loadScript(
-          "https://files.bpcontent.cloud/2024/10/04/14/20241004142119-0UR9DVOH.js "
+          "https://files.bpcontent.cloud/2024/10/04/14/20241004142119-0UR9DVOH.js"
         );
+
+        
+
+    
 
         window.botpressWebChat.init({
           botId: "your-bot-id",
