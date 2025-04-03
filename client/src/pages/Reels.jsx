@@ -60,7 +60,7 @@ const Reels = () => {
   };
 
   useEffect(() => {
-    fetch("https://radhakrishnavaani-server.onrender.com/api/reels")
+    fetch(`${import.meta.env.VITE_BASE_URL}/api/reels`)
       .then((res) => res.json())
       .then((data) => {
         const shuffledVideos = shuffleArray(data);
