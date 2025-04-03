@@ -8,7 +8,7 @@ const Unsubscribe = () => {
   const handleUnsubscribe = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.delete("https://radhakrishnavaani-server.onrender.com/api/unsubscribe", {
+      const response = await axios.delete(`${import.meta.env.VITE_BASE_URL}/api/unsubscribe`, {
         data: { email },
       });
       setMessage(response.data.message);
