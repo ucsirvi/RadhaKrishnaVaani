@@ -5,7 +5,7 @@ import useFetch from "../hooks/useFetch.jsx";
 import { ClipLoader } from "react-spinners";
 
 const Images = () => {
-  const { data: images, loading, error } = useFetch("https://radhakrishnavaani-server.onrender.com/api/images");
+  const { data: images, loading, error } = useFetch(`${import.meta.env.VITE_BASE_URL}/api/images`);
 
   const [filter, setFilter] = useState("all");
   const [modalIsOpen, setModalIsOpen] = useState(false);
